@@ -37,6 +37,15 @@
       ],
       "@remote/*": [
         "src/remote/*"
+      ],
+      "@constants": [
+        "src/constants/index"
+      ],
+      "@constants/*": [
+        "src/constants/index/*"
+      ],
+      "@models/*": [
+        "src/models/*"
       ]
     }
   },
