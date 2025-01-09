@@ -46,7 +46,10 @@
       ],
       "@models/*": [
         "src/models/*"
-      ]
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
