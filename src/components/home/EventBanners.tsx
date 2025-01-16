@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/Image'
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { css } from '@emotion/react'
 import useEventBanners from "@components/home/hooks/useEventBanners";
@@ -19,9 +19,7 @@ const EventBanners = () => {
           return (
             <SwiperSlide key={banner.id}>
               <Link href={banner.link}>
-                <Flex style={{ backgroundColor: banner.backgroundColor}} justify={'space-between'}
-                css={bannerStyles}
-                >
+                <Flex style={{ backgroundColor: banner.backgroundColor}} justify={'space-between'} css={bannerStyles}>
                   <Flex direction={'column'}>
                     <Text bold={true}>{banner.title}</Text>
                     <Text typography={'t6'}>{banner.subTitle}</Text>

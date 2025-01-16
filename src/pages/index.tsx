@@ -4,6 +4,7 @@ import { css } from "@emotion/react"
 import Skeleton from "@shared/Skeleton";
 import Account from '@components/home/Account'
 import {BannerSkeleton} from "@components/home/EventBanners";
+import { CardListSkeleton} from "@components/home/CardList";
 import Spacing from "@shared/Spacing";
 
 const EventBanners = dynamic(() => import("@components/home/EventBanners"),{
@@ -16,6 +17,11 @@ const CreditScore = dynamic(() => import("@components/home/CreditScore"),{
   loading : () => null
 })
 
+const CardList = dynamic(() => import("@components/home/CardList"),{
+  ssr: false,
+  loading : () => <CardListSkeleton />
+})
+
 export default function Home() {
   return (
     <>
@@ -23,6 +29,7 @@ export default function Home() {
       <Account />
       <Spacing size={8} backgroundColor={'gray100'} />
       <CreditScore />
+      <CardList />
     </>
   );
 }
